@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .btn
+        {
+            border: 1px solid #3498db;
+            background: none;
+            padding: 10px 20px;
+            font-size: 28px;
+            font-family: "Arial";
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.8s all linear;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn1, .btn3
+        {
+            color: #3498db;
+        }
+
+        .btn2, .btn4 
+        {
+            color: #fff;
+        }
+
+        .btn1:hover, .btn3:hover
+        {
+            color: #fff;
+        }
+
+        .btn2:hover, .btn4:hover
+        {
+            color: #3498db;
+        }
+
+        .btn::before
+        {
+            content: " ";
+            position: absolute;
+            left: 0;
+            height: 0;
+            width: 100%;
+            background: #3498db;
+            z-index: -1;
+            transition: 0.8s all ease-in-out;
+        }
+
+        .btn1::before, .btn3::before
+        {
+            top: 0;
+            border-radius: 0 0 100% 5%;
+            /* height: 180%; */
+        }
+
+        .btn2::before, .btn4::before
+        {
+            bottom: 0;
+            border-radius: 100% 5% 0 0;
+            height: 180%;
+        }
+
+        .btn1:hover::before, .btn3:hover::before
+        {
+            height: 180%;
+        }
+
+        .btn2:hover::before, .btn4:hover::before
+        {
+            height: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="btn btn1">Hello</button>
+    <button class="btn btn2">Hello</button>
+    <button class="btn btn3">Hello</button>
+    <button class="btn btn4">Hello</button>
+</body>
+</html>
